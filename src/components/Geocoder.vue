@@ -1,13 +1,7 @@
 <template>
   <div style="height:100%;width:100%;">
     <div id="geocoder" class="geocoder"></div>
-    <div id="map" ref="basicMapbox" :style="mapSize"></div>
-    <div class="sidebar">
-      <div class="heading">
-        <h1>Our locations</h1>
-      </div>
-      <div id="listings" class="listings"></div>
-    </div>
+    <div id="map" :style="mapSize" class="map pad2"></div>
   </div>
 </template>
 <script>
@@ -36,107 +30,213 @@ export default {
         return [
           {
             type: "Feature",
-            properties: {
-              title: "Lincoln Park",
-              description:
-                "A northside park that is home to the Lincoln Park Zoo"
-            },
             geometry: {
-              coordinates: [-87.637596, 41.940403],
-              type: "Point"
+              type: "Point",
+              coordinates: [-77.034084142948, 38.909671288923]
+            },
+            properties: {
+              name: "Shakespeare Hotel",
+              phoneFormatted: "(202) 234-7336",
+              phone: "2022347336",
+              address: "1471 P St NW",
+              city: "Washington DC",
+              country: "United States",
+              crossStreet: "at 15th St NW",
+              postalCode: "20005",
+              state: "D.C."
             }
           },
           {
             type: "Feature",
-            properties: {
-              title: "Burnham Park",
-              description: "A lakefront park on Chicago's south side"
-            },
             geometry: {
-              coordinates: [-87.603735, 41.829985],
-              type: "Point"
+              type: "Point",
+              coordinates: [-77.049766, 38.900772]
+            },
+            properties: {
+              name: "Dove and Olive",
+              phoneFormatted: "(202) 507-8357",
+              phone: "2025078357",
+              address: "2221 I St NW",
+              city: "Washington DC",
+              country: "United States",
+              crossStreet: "at 22nd St NW",
+              postalCode: "20037",
+              state: "D.C."
             }
           },
           {
             type: "Feature",
-            properties: {
-              title: "Millennium Park",
-              description:
-                "A downtown park known for its art installations and unique architecture"
-            },
             geometry: {
-              coordinates: [-87.622554, 41.882534],
-              type: "Point"
+              type: "Point",
+              coordinates: [-77.043929, 38.910525]
+            },
+            properties: {
+              name: "Dove and Olive",
+              phoneFormatted: "(202) 387-9338",
+              phone: "2023879338",
+              address: "1512 Connecticut Ave NW",
+              city: "Washington DC",
+              country: "United States",
+              crossStreet: "at Dupont Circle",
+              postalCode: "20036",
+              state: "D.C."
             }
           },
           {
             type: "Feature",
-            properties: {
-              title: "Grant Park",
-              description:
-                "A downtown park that is the site of many of Chicago's favorite festivals and events"
-            },
             geometry: {
-              coordinates: [-87.619185, 41.876367],
-              type: "Point"
+              type: "Point",
+              coordinates: [-77.0672, 38.90516896]
+            },
+            properties: {
+              name: "Dove and Olive 1",
+              phoneFormatted: "(202) 337-9338",
+              phone: "2023379338",
+              address: "3333 M St NW",
+              city: "Washington DC",
+              country: "United States",
+              crossStreet: "at 34th St NW",
+              postalCode: "20007",
+              state: "D.C."
             }
           },
           {
             type: "Feature",
-            properties: {
-              title: "Humboldt Park",
-              description: "A large park on Chicago's northwest side"
-            },
             geometry: {
-              coordinates: [-87.70199, 41.905423],
-              type: "Point"
+              type: "Point",
+              coordinates: [-77.002583742142, 38.887041080933]
+            },
+            properties: {
+              name: "Dove and Olive 2",
+              phoneFormatted: "(202) 547-9338",
+              phone: "2025479338",
+              address: "221 Pennsylvania Ave SE",
+              city: "Washington DC",
+              country: "United States",
+              crossStreet: "btwn 2nd & 3rd Sts. SE",
+              postalCode: "20003",
+              state: "D.C."
             }
           },
           {
             type: "Feature",
-            properties: {
-              title: "Douglas Park",
-              description:
-                "A large park near in Chicago's North Lawndale neighborhood"
-            },
             geometry: {
-              coordinates: [-87.699329, 41.860092],
-              type: "Point"
+              type: "Point",
+              coordinates: [-76.933492720127, 38.99225245786]
+            },
+            properties: {
+              name: "Aurora Hotel",
+              address: "8204 Baltimore Ave",
+              city: "College Park",
+              country: "United States",
+              postalCode: "20740",
+              state: "MD"
             }
           },
           {
             type: "Feature",
-            properties: {
-              title: "Calumet Park",
-              description:
-                "A park on the Illinois-Indiana border featuring a historic fieldhouse"
-            },
             geometry: {
-              coordinates: [-87.530221, 41.715515],
-              type: "Point"
+              type: "Point",
+              coordinates: [-77.097083330154, 38.980979]
+            },
+            properties: {
+              name: "Dove and Olive 3",
+              phoneFormatted: "(301) 654-7336",
+              phone: "3016547336",
+              address: "4831 Bethesda Ave",
+              cc: "US",
+              city: "Bethesda",
+              country: "United States",
+              postalCode: "20814",
+              state: "MD"
             }
           },
           {
             type: "Feature",
-            properties: {
-              title: "Jackson Park",
-              description:
-                "A lakeside park that was the site of the 1893 World's Fair"
-            },
             geometry: {
-              coordinates: [-87.580389, 41.783185],
-              type: "Point"
+              type: "Point",
+              coordinates: [-77.359425054188, 38.958058116661]
+            },
+            properties: {
+              name: "Aurora Hotel 1",
+              phoneFormatted: "(571) 203-0082",
+              phone: "5712030082",
+              address: "11935 Democracy Dr",
+              city: "Reston",
+              country: "United States",
+              crossStreet: "btw Explorer & Library",
+              postalCode: "20190",
+              state: "VA"
             }
           },
           {
             type: "Feature",
-            properties: {
-              title: "Columbus Park",
-              description: "A large park in Chicago's Austin neighborhood"
-            },
             geometry: {
-              coordinates: [-87.769775, 41.873683],
-              type: "Point"
+              type: "Point",
+              coordinates: [-77.10853099823, 38.880100922392]
+            },
+            properties: {
+              name: "Dove and Olive 4",
+              phoneFormatted: "(703) 522-2016",
+              phone: "7035222016",
+              address: "4075 Wilson Blvd",
+              city: "Arlington",
+              country: "United States",
+              crossStreet: "at N Randolph St.",
+              postalCode: "22203",
+              state: "VA"
+            }
+          },
+          {
+            type: "Feature",
+            geometry: {
+              type: "Point",
+              coordinates: [-75.28784, 40.008008]
+            },
+            properties: {
+              name: "Aurora Hotel 3",
+              phoneFormatted: "(610) 642-9400",
+              phone: "6106429400",
+              address: "68 Coulter Ave",
+              city: "Ardmore",
+              country: "United States",
+              postalCode: "19003",
+              state: "PA"
+            }
+          },
+          {
+            type: "Feature",
+            geometry: {
+              type: "Point",
+              coordinates: [-75.20121216774, 39.954030175164]
+            },
+            properties: {
+              name: "Dove and Olive 5",
+              phoneFormatted: "(215) 386-1365",
+              phone: "2153861365",
+              address: "3925 Walnut St",
+              city: "Philadelphia",
+              country: "United States",
+              postalCode: "19104",
+              state: "PA"
+            }
+          },
+          {
+            type: "Feature",
+            geometry: {
+              type: "Point",
+              coordinates: [-77.043959498405, 38.903883387232]
+            },
+            properties: {
+              name: "GT's Hotel",
+              phoneFormatted: "(202) 331-3355",
+              phone: "2023313355",
+              address: "1901 L St. NW",
+              city: "Washington DC",
+              country: "United States",
+              crossStreet: "at 19th St",
+              postalCode: "20036",
+              state: "D.C."
             }
           }
         ];
@@ -155,24 +255,11 @@ export default {
     return {
       mapboxgl: mapboxgl,
       map: null,
-      popup: null
+      popup: null,
+      userCoord: []
     };
   },
   watch: {
-    userLocation: function(e) {
-      this.map.getSource("userlocation").setData({
-        type: "FeatureCollection",
-        features: [
-          {
-            type: "Feature",
-            geometry: {
-              type: "Point",
-              coordinates: [e.lng, e.lat]
-            }
-          }
-        ]
-      });
-    },
     markers: function(e) {
       setTimeout(function() {
         this.map.getSource("markers").setData({
@@ -227,21 +314,31 @@ export default {
         .setHTML(
           '<div class="pop__flex">\n            <div class="main__pop">\n              <header>\n                <p><strong>'
             .concat(
-              // e.properties.name,
-              e.properties.title,
+              e.properties.name,
               '</strong></p>\n                <span class="distance">'
             )
+            // .concat(
+            //   e.properties.distance,
+            //   ' km</span>\n              </header>\n              <p class="small">'
+            // )
             .concat(
-              e.properties.distance,
-              ' km</span>\n              </header>\n              <p class="small">'
+              e.properties.address +
+                ", " +
+                e.properties.postcode +
+                ", " +
+                e.properties.city +
+                ", " +
+                e.properties.country,
+              "</p>\n              "
             )
-            // .concat(e.properties.address, "</p>\n              ")
-            .concat(e.properties.description, "</p>\n              ")
             .concat(
-              e.properties.phone
+              e.properties.phoneFormatted
                 ? '<a href="tel:'
-                    .concat(e.properties.phone, '" class="phone-link small">')
-                    .concat(e.properties.phone, "</a>")
+                    .concat(
+                      e.properties.phoneFormatted,
+                      '" class="phone-link small">'
+                    )
+                    .concat(e.properties.phoneFormatted, "</a>")
                 : "",
               "\n            </div>\n          </div>"
             )
@@ -254,7 +351,7 @@ export default {
       this.map = new this.mapboxgl.Map({
         container: "map",
         style: this.currentStyle,
-        center: [-87.6244, 41.8756],
+        center: [-77.034084, 38.909671],
         zoom: 13,
         pitch: 0,
         minZoom: 2,
@@ -278,6 +375,7 @@ export default {
         this.addMapSources();
         this.addMapLayers();
         this.addGeocoder();
+        this.addGeolocationControl();
         // this.currentStore && this.getCurrentStoreMarker();
       });
       this.addMapEvents();
@@ -375,20 +473,56 @@ export default {
     addGeocoder() {
       let geocoder = new MapboxGeocoder({
         accessToken: this.mapboxgl.accessToken,
-        localGeocoder: this.forwardGeocoder,
+        // localGeocoder: this.forwardGeocoder,
         // zoom: 14,
+        countries: "au",
+        bbox: [139.965, -38.03, 155.258, -27.839],
+        autocomplete: true,
         marker: false,
-        placeholder: "Enter search venue name",
+        placeholder: "Postcode",
+        filter: item => {
+          return item.context
+            .map(i => {
+              return (
+                i.id.split(".").shift() === "region" &&
+                i.text === "New South Wales"
+              );
+            })
+            .reduce(function(acc, cur) {
+              return acc || cur;
+            });
+        },
         mapboxgl: this.mapboxgl
       });
 
       document.getElementById("geocoder").appendChild(geocoder.onAdd(this.map));
 
-      geocoder.on("result", (ev)=> {
+      geocoder.on("result", ev => {
         let searchResult = ev.result.geometry;
         this.map.getSource("selectedmarker").setData(searchResult);
-        console.log(this.map.getSource("selectedmarker"))
+        console.log(this.map.getSource("selectedmarker"));
       });
+    },
+    addGeolocationControl() {
+      this.map.addControl(
+        new this.mapboxgl.GeolocateControl({
+          positionOptions: {
+            enableHighAccuracy: true
+          },
+          trackUserLocation: true
+        })
+      );
+      if ("geolocation" in navigator) {
+        navigator.geolocation.getCurrentPosition(position => {
+          this.userCoord = [];
+          this.userCoord.push(position.coords.latitude);
+          this.userCoord.push(position.coords.longitude);
+          console.log(this.userCoord);
+          this.setUserLocation(this.userCoord);
+        });
+      } else {
+        /* geolocation IS NOT available, handle it */
+      }
     },
     addMapEvents() {
       this.map.on("moveend", () => {
@@ -413,9 +547,9 @@ export default {
         let coord = e.features[0].geometry.coordinates.slice();
         let prop = e.features[0].properties;
         // e.features[0].properties.name;
-        e.features[0].properties.title;
+        e.features[0].properties.name;
         // console.log(e.features[0].geometry.coordinates.slice());
-        // console.log(e.features[0].properties.title);
+        // console.log(e.features[0].properties.name);
         this.$emit("select", e.features[0]);
         this.map.flyTo({
           center: e.features[0].geometry.coordinates,
@@ -462,21 +596,60 @@ export default {
       for (let i = 0; i < this.markers.length; i++) {
         let feature = this.markers[i];
         if (
-          feature.properties.title.toLowerCase().search(query.toLowerCase()) !==
+          feature.properties.name.toLowerCase().search(query.toLowerCase()) !==
           -1
         ) {
           // using carmen geojson format: https://github.com/mapbox/carmen/blob/master/carmen-geojson.md
           feature["place_name"] =
-            "🌲 " +
-            feature.properties.title +
-            " " +
-            feature.properties.description;
+            "🌲 " + feature.properties.name + " " + feature.properties.address;
           feature["center"] = feature.geometry.coordinates;
           feature["place_type"] = ["park"];
           matchingFeatures.push(feature);
         }
       }
       return matchingFeatures;
+    },
+    setUserLocation(e) {
+      this.map.getSource("userlocation").setData({
+        type: "FeatureCollection",
+        features: [
+          {
+            type: "Feature",
+            geometry: {
+              type: "Point",
+              coordinates: [e.lng, e.lat]
+            }
+          }
+        ]
+      });
+      console.log(this.map.getSource("userlocation"));
+    },
+    calculateDistance(coordStart, coordEnd) {
+      let radLat1 = (coordStart[0] * Math.PI) / 180.0;
+      let radLat2 = (coordEnd[0] * Math.PI) / 180.0;
+      let a = radLat1 - radLat2;
+      let b =
+        (coordStart[1] * Math.PI) / 180.0 - (coordEnd[1] * Math.PI) / 180.0;
+      let s =
+        2 *
+        Math.asin(
+          Math.sqrt(
+            Math.pow(Math.sin(a / 2), 2) +
+              Math.cos(radLat1) *
+                Math.cos(radLat2) *
+                Math.pow(Math.sin(b / 2), 2)
+          )
+        );
+      s = s * 6378.137;
+      s = Math.round(s * 10000) / 10000;
+      return s;
+    },
+    moveToPlace(e) {
+      if ("store" === e.type) this.handleStoreClick(e);
+      else {
+        var t = this.center.zoom > 13 ? this.center.zoom : 13;
+        this.centerMap(e.geometry.coordinates, t);
+      }
     }
   },
   computed: {
